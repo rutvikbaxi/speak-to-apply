@@ -21,3 +21,9 @@
 - "What changed" is generated with the existing Groq model (gpt-oss-120b): each change is labelled with its source (voice note, your answers, wording polish), and the resume preview highlights added and reworded lines by comparing before and after. To switch to a different AI API later, swap the model in `speak/llm.py`.
 - "Anything new" now comes right after the upload step. Its follow-up questions come from a separate AI call, so the "before" version of the resume never absorbs the new information.
 - When the voice note adds a new current role, any older "Present" role is ended the month before it starts, and this is listed as a change the user can edit.
+
+# Iteration 3: notes
+(Logged 4 Nov 2026. Not implemented yet.)
+
+- [ ] Font: switch to a serif font (replacing Helvetica) across both apps and the resume PDF.
+- [ ] Palette reference shared by Rutvik: #10375C (navy), #1E81B0 (blue), #B4E1FA (light blue), #F1E0C5 (beige), #FFFBF4 (cream-white). The current build uses a different navy/beige/cream/grey set. Confirm whether to switch to this palette.
