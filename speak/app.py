@@ -1,5 +1,5 @@
 """Speak-to-Apply — voice/LinkedIn/PDF to resume, job recommendations and pre-filled applications."""
-import json, os, re, sqlite3, time, logging
+import asyncio, json, os, re, sqlite3, time, logging
 from pathlib import Path
 
 import httpx, pymupdf
@@ -78,6 +78,13 @@ PROFILE_SCHEMA = """{
  "skills": [str], "languages": [str], "achievements": [str]
 }"""
 
+QUESTION_RULES = """Follow-up question rules:
+- Ask ONLY for important gaps that would clearly improve the resume (e.g. a recent role with no outcome, a missing date range, unclear scope or team size, missing education).
+- If the information is already good enough, return "questions": [].
+- Each question has 3 concrete options plus "Skip". Keep questions short and specific to this person. Maximum 3 questions.
+- Ask about career substance only (outcomes, scope, team size, dates). NEVER ask for contact details (email, phone, address) and never put guessed personal data in options.
+- Options must be general ranges or categories (e.g. "Cut drop-off by under 10%", "10–25%", "Over 25%"), not invented specifics."""
+
 RULES = """Rules:
 - NEVER invent facts, employers, dates, numbers or skills. Use only what the sources say. Leave a field "" or [] if unknown.
 - LinkedIn copy-paste text is messy (menus, "Show all", reactions, other people's posts). Ignore that noise.
@@ -99,19 +106,31 @@ async def analyze(req: Request):
 Return JSON: {{"profile": PROFILE, "questions": [{{"id": "q1", "question": str, "options": [str, str, str, "Skip"]}}]}}
 PROFILE schema: {PROFILE_SCHEMA}
 {RULES}
-Follow-up questions:
-- Ask 0 to 3 multiple-choice questions ONLY for important gaps that would clearly improve the resume (e.g. a recent role with no outcome, a missing date range, unclear seniority/team size, missing education).
-- If the information is already good enough, return "questions": [].
-- Each question has 3 concrete options plus "Skip". Keep questions short and specific to this person.
-- Ask about career substance only (outcomes, scope, team size, seniority, dates). NEVER ask for contact details (email, phone, address) and never put guessed personal data in options.
-- Options must be general ranges or categories (e.g. "Cut drop-off by under 10%", "10–25%", "Over 25%"), not invented specifics."""
+{QUESTION_RULES}"""
     user = f"Job seeker preferences (for context): {json.dumps(b.get('prefs', {}))}\n\n" + "\n\n".join(
         f"=== {k.upper()} ===\n{v}" for k, v in sources.items() if v.strip())
+    addendum = (b.get("addendum") or "").strip()[:8000]
+
+    def new_info_questions():
+        # separate call, so the "before" profile can never absorb the new information
+        return llm.chat_json(f"""A job seeker dictated NEW INFORMATION that is missing from their resume (e.g. a new job).
+Decide whether 0-2 multiple-choice follow-up questions would clearly improve how this new information reads on a resume.
+Return JSON: {{"questions": [{{"id": "n1", "question": str, "options": [str, str, str, "Skip"]}}]}}
+{QUESTION_RULES}""", f"NEW INFORMATION:\n{addendum}", max_tokens=1500)
     try:
-        out = llm.chat_json(system, user)
+        loop = asyncio.get_running_loop()
+        main = loop.run_in_executor(None, llm.chat_json, system, user)
+        extra = loop.run_in_executor(None, new_info_questions) if addendum else None
+        out = await main
+        extra_q = []
+        if extra:
+            try: extra_q = (await extra).get("questions") or []
+            except Exception: log.warning("new-info questions failed")
     except Exception as e:
         raise HTTPException(502, str(e))
-    out["questions"] = [q for q in (out.get("questions") or []) if not re.search(r"email|phone|address|contact", q.get("question", ""), re.I)][:3]
+    qs = (out.get("questions") or [])[:2] + extra_q[:2] if extra_q else (out.get("questions") or [])
+    for i, q in enumerate(qs): q["id"] = f"q{i+1}"
+    out["questions"] = [q for q in qs if not re.search(r"email|phone|address|contact", q.get("question", ""), re.I)][:3]
     return _fix_years(out)
 
 
@@ -122,21 +141,44 @@ async def build(req: Request):
     if llm.mock():
         return llm.mock_build(profile, addendum)
     system = f"""You finalise a resume profile. Merge the draft profile with the person's multiple-choice answers and any NEW INFORMATION they dictated (e.g. a new job since their old resume).
-Return JSON: {{"profile": PROFILE, "changes": [str]}}
+Return JSON: {{"profile": PROFILE, "changes": [{{"what": str, "source": "your voice note" | "your answers" | "wording polish"}}]}}
 PROFILE schema: {PROFILE_SCHEMA}
 {RULES}
 - Answers marked "Skip" are ignored. Use answers only to sharpen wording of existing items. They are ranges/categories, so phrase them as such (e.g. "cut drop-off by 10–25%"); never turn them into exact numbers.
 - Never add contact details that are not in the draft profile.
 - Add new roles/projects from NEW INFORMATION in the right chronological position; if a new role starts after a role marked "Present", end the older role.
 - Tune headline and summary toward their target: {json.dumps(b.get('prefs', {}))}.
-- "changes": 2-6 short plain-English notes of what you added or changed vs the draft (e.g. "Added Product Manager at X (2025–Present)")."""
+- Keep the person's original wording for bullets you don't need to change, so the before/after comparison stays meaningful.
+- "changes": 2-6 short plain-English notes of what you added or changed vs the draft (e.g. {{"what": "Added Product Manager at X (2025–Present)", "source": "your voice note"}}). Do not mention years of experience."""
     user = f"DRAFT PROFILE:\n{json.dumps(profile)}\n\nMULTIPLE-CHOICE ANSWERS:\n{json.dumps(answers)}\n\nNEW INFORMATION (dictated):\n{addendum or '(none)'}"
     try:
         out = llm.chat_json(system, user)
     except Exception as e:
         raise HTTPException(502, str(e))
-    out["changes"] = [c for c in out.get("changes", []) if "years of experience" not in c.lower()]
+    out["changes"] = [c for c in out.get("changes", []) if "years of experience" not in str(c).lower()]
+    _close_superseded_roles(profile, out)
     return _fix_years(out)
+
+
+def _norm(s): return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def _close_superseded_roles(before, out):
+    """If the voice note added a new current role, end older 'Present' roles at other companies just before it."""
+    p = out.get("profile") or {}
+    old_cos = {_norm(e.get("company")) for e in before.get("experience") or []}
+    exp = p.get("experience") or []
+    is_present = lambda e: (e.get("end") or "").strip().lower() in ("present", "current", "now", "")
+    new_current = [e for e in exp if _norm(e.get("company")) not in old_cos and is_present(e) and _ym(e.get("start"))]
+    if not new_current: return
+    start = min(_ym(e["start"]) for e in new_current)
+    for e in exp:
+        if e in new_current or not is_present(e): continue
+        s0 = _ym(e.get("start"))
+        if s0 and s0 < start:
+            m = start - 1; y, mo = divmod(m - 1, 12)
+            e["end"] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][mo] + f" {y}"
+            out.setdefault("changes", []).append({"what": f"Ended {e.get('title')} at {e.get('company')} in {e['end']}, when your new role started (edit if you still hold both)", "source": "your voice note"})
 
 
 # ---------------- years of experience (computed, not trusted to the LLM) ----------------
@@ -249,7 +291,7 @@ Return JSON {"summary": str, "cover": str, "answers": [str, str, str]}.
     tailored = dict(profile); tailored["summary"] = t.get("summary") or profile.get("summary", "")
     pdf = render_resume_pdf(tailored)
     data = {"job_id": job_id, "name": profile.get("name", ""), "email": b.get("email") or profile.get("email", ""),
-            "phone": profile.get("phone", ""), "linkedin": profile.get("linkedin", ""),
+            "phone": profile.get("phone", ""),
             "cover": t.get("cover", ""), "answers": (t.get("answers") or [])[:3]}
     try:
         r = httpx.post(f"{HIREHUB_URL}/api/prefill", timeout=30, headers={"x-prefill-secret": PREFILL_SECRET},

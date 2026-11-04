@@ -45,15 +45,15 @@ with db() as c:
 
 # ---------------- email ----------------
 def confirmation_html(name, job, app_id):
-    return f"""<div style="font-family:Arial,sans-serif;max-width:560px;margin:auto;color:#1f2430">
-<div style="background:#2445d6;color:#fff;padding:18px 24px;border-radius:10px 10px 0 0;font-size:20px;font-weight:bold">HireHub</div>
-<div style="border:1px solid #e3e6ee;border-top:0;padding:24px;border-radius:0 0 10px 10px">
+    return f"""<div style="font-family:Helvetica,Arial,sans-serif;max-width:560px;margin:auto;color:#111111">
+<div style="background:#1f2d4d;color:#fff;padding:18px 24px;border-radius:10px 10px 0 0;font-size:20px;font-weight:bold">HireHub</div>
+<div style="border:1px solid #e2e2df;border-top:0;padding:24px;border-radius:0 0 10px 10px">
 <p>Hi {name.split()[0] if name else 'there'},</p>
 <p>Thanks for applying! We've received your application for:</p>
-<p style="background:#f3f5fb;padding:14px;border-radius:8px"><b>{job['title']}</b><br>{job['company']} · {job['location']}</p>
+<p style="background:#f7f2e7;padding:14px;border-radius:8px"><b>{job['title']}</b><br>{job['company']} · {job['location']}</p>
 <p>Application reference: <b>{app_id[:8].upper()}</b></p>
 <p>The {job['company']} hiring team will review your profile. If there's a match, they'll reach out within 2–3 weeks.</p>
-<p style="color:#7a8194;font-size:12px;margin-top:28px">HireHub is a demo job portal built for a course project. All companies and jobs are fictional.</p>
+<p style="color:#6e6e6e;font-size:12px;margin-top:28px">HireHub is a demo job portal built for a course project. All companies and jobs are fictional.</p>
 </div></div>"""
 
 
@@ -124,7 +124,7 @@ def prefill_resume(token: str):
 
 @app.post("/jobs/{job_id}/apply")
 async def apply(job_id: str, name: str = Form(...), email: str = Form(...), phone: str = Form(""),
-                linkedin: str = Form(""), cover: str = Form(""), token: str = Form(""),
+                cover: str = Form(""), token: str = Form(""),
                 a0: str = Form(""), a1: str = Form(""), a2: str = Form(""), resume: Optional[UploadFile] = File(None)):
     job = JOBS_BY_ID.get(job_id) or _404()
     app_id = uuid.uuid4().hex
@@ -144,7 +144,7 @@ async def apply(job_id: str, name: str = Form(...), email: str = Form(...), phon
     answers = dict(zip(job["screening"], [a0, a1, a2]))
     with db() as c:
         c.execute("INSERT INTO applications VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
-                  (app_id, job_id, name, email, phone, linkedin, cover, json.dumps(answers), resume_name, source, time.time(), status))
+                  (app_id, job_id, name, email, phone, "", cover, json.dumps(answers), resume_name, source, time.time(), status))
     return RedirectResponse(f"/applied/{app_id}", status_code=303)
 
 

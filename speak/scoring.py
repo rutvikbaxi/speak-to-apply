@@ -1,4 +1,5 @@
-"""Transparent fit score out of 10: 60% requirements match + 40% preference match."""
+"""Transparent fit score out of 10: 60% requirements match + 40% preference match.
+Seniority is judged on years of experience only, never on job titles (companies use titles differently)."""
 import json
 
 SECTOR_WORDS = {
@@ -11,7 +12,6 @@ SECTOR_WORDS = {
     "Luxury & Retail": ["luxury", "fashion", "retail", "beauty", "premium", "omnichannel"],
     "Energy & Climate": ["energy", "climate", "sustainab", "solar", "grid", "carbon", "iot"],
 }
-LEVEL_KEYS = {"Associate Product Manager": "APM", "Product Manager": "PM", "Senior Product Manager": "Senior PM", "Group Product Manager": "Group PM"}
 FRENCH_RANK = {"none": 0, "basic": 1, "b2": 2, "c1": 3, "native": 3}
 
 
@@ -40,7 +40,7 @@ def score_job(profile: dict, prefs: dict, job: dict) -> dict:
     if lo <= yrs <= hi + 1: s, note = (10 if abs(yrs - mid) <= (hi - lo) / 4 + 0.5 else 8.5), f"{yrs:g} yrs fits {lo}–{hi}"
     elif yrs < lo: s, note = (6 if lo - yrs <= 1 else 3 if lo - yrs <= 2.5 else 1), f"{yrs:g} yrs vs {lo}+ needed"
     else: s, note = (7 if yrs - hi <= 3 else 4), f"{yrs:g} yrs, may be over-qualified"
-    f.append(dict(key="exp", label="Experience", group="req", w=0.40, score=s, note=note))
+    f.append(dict(key="exp", label="Years of experience", group="req", w=0.45, score=s, note=note))
 
     words = SECTOR_WORDS.get(job["sector"], [])
     hits = [w.strip() for w in words if w in f" {text} "]
@@ -49,7 +49,7 @@ def score_job(profile: dict, prefs: dict, job: dict) -> dict:
     skill_hits = [k for k in ["sql", "a/b", "b2b", "discovery", "llm", "data", "technical", "payments", "checkout", "onboarding", "growth", "mobile", "pricing", "marketplace", "platform", "integrations", "personalisation"]
                   if k in req_text and k in text]
     s = (3 if not hits else 5.5 if len(hits) == 1 else 7) + (2 if pm else 0) + min(len(skill_hits), 2) * 0.5
-    f.append(dict(key="domain", label="Domain & skills", group="req", w=0.30, score=min(s, 10),
+    f.append(dict(key="domain", label="Domain & skills", group="req", w=0.25, score=min(s, 10),
                   note=(f"{job['sector']} experience" if hits else f"No {job['sector']} background") + (" · product role" if pm else "")))
 
     top = (profile.get("education_tier") == "top")
@@ -79,14 +79,6 @@ def score_job(profile: dict, prefs: dict, job: dict) -> dict:
 
     sizes = prefs.get("sizes") or []
     f.append(dict(key="size", label="Company size", group="pref", w=0.15 if sizes else 0, score=10 if not sizes or job["company_size"] in sizes else 3, note=job["company_size_label"]))
-
-    ctype = prefs.get("company_type") or "Either"
-    f.append(dict(key="type", label="Startup / MNC", group="pref", w=0.10 if ctype != "Either" else 0, score=10 if ctype == "Either" or ctype == job["company_type"] else 3, note=job["company_type"]))
-
-    lvl = prefs.get("target_level")
-    if lvl and lvl != "Not sure":
-        s = 10 if LEVEL_KEYS[job["level"]] == lvl else 4
-        f.append(dict(key="level", label="Target level", group="pref", w=0.25, score=s, note=job["level"]))
 
     def group(g):
         items = [x for x in f if x["group"] == g and x["w"] > 0]; tw = sum(x["w"] for x in items)

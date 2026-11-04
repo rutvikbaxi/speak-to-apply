@@ -1,9 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Speak-to-Apply</title><link rel="stylesheet" href="/static/app.css"></head><body><div class="wrap">
 <div class="brand"><span class="dot"></span>Speak-to-Apply</div>
-<div class="stepper" id="stepper"><div>1 · About you</div><div>2 · Quick questions</div><div>3 · Anything new?</div><div>4 · Your resume</div><div>5 · Recommended jobs</div></div>
+<div class="stepper" id="stepper"><div>1 · About you</div><div>2 · Anything new?</div><div>3 · Quick questions</div><div>4 · Your resume</div><div>5 · Recommended jobs</div></div>
 
-<!-- STEP 1 -->
+<!-- STEP 1: sources -->
 <section id="s1">
 <h1>Tell us about your career</h1>
 <p class="lead">Use any mix of the three. More input gives a better resume. Nothing is sent anywhere until you continue.</p>
@@ -23,45 +23,49 @@
 <div class="actions"><button class="btn" id="go1" disabled>Continue →</button></div>
 </section>
 
-<!-- STEP 2 -->
+<!-- STEP 2: anything new (voice only) -->
 <section id="s2" class="hidden">
+<h1>Anything new since then?</h1>
+<p class="lead">A new job, promotion, project or certification that isn't in what you just shared? Just say it. Voice only. Skip if nothing has changed.</p>
+<div class="card center"><div class="rec" id="rec2"></div></div>
+<div class="actions"><button class="btn ghost" data-back="1">← Back</button><button class="btn ghost" id="skip2">Nothing new, skip</button><button class="btn" id="go2" disabled>Continue →</button></div>
+</section>
+
+<!-- STEP 3: preferences + follow-ups -->
+<section id="s3" class="hidden">
 <h1>A few quick questions</h1>
 <p class="lead">Your job preferences shape the recommendations. Follow-ups only appear if something important is missing.</p>
 <div class="card"><h2>Job preferences</h2><div id="prefs"></div></div>
-<div class="card"><h2>Follow-ups <span class="sub">· based on what you shared</span></h2><div id="fups"><div class="loading"><div class="spin"></div>Reading your information and checking for gaps…</div></div></div>
-<div id="err2"></div>
-<div class="actions"><button class="btn ghost" data-back="1">← Back</button><button class="btn" id="go2" disabled>Continue →</button></div>
-</section>
-
-<!-- STEP 3 -->
-<section id="s3" class="hidden">
-<h1>Anything new since then?</h1>
-<p class="lead">A new job, promotion, project or certification that isn't in what you shared? Just say it. Voice only. Skip if nothing changed.</p>
-<div class="card center"><div class="rec" id="rec2"></div></div>
+<div class="card"><h2>Follow-ups <span class="sub">· based on what you shared</span></h2><div id="fups"></div></div>
 <div id="err3"></div>
-<div class="actions"><button class="btn ghost" data-back="2">← Back</button><button class="btn ghost" id="skip3">Skip</button><button class="btn" id="go3" disabled>Build my resume →</button></div>
+<div class="actions"><button class="btn ghost" data-back="2">← Back</button><button class="btn" id="go3" disabled>Build my resume →</button></div>
 </section>
 
-<!-- STEP 4 -->
+<!-- STEP 4: resume -->
 <section id="s4" class="hidden">
 <h1>Your resume</h1>
-<p class="lead">Click any text to edit it. Check that everything is accurate before you apply.</p>
+<p class="lead">Click any text to edit it. Highlighted parts are new or changed compared with what you shared. Check they're accurate before you apply.</p>
 <div id="building" class="card center"><div class="loading" style="justify-content:center"><div class="spin"></div>Building your resume…</div></div>
 <div class="resume-wrap hidden" id="resumewrap">
- <div class="paper" id="paper"></div>
- <div><div class="card"><h2>What we added</h2><ul class="changes" id="changes"></ul></div>
+ <div>
+  <div class="legend"><span><span class="sw" style="width:20px;height:12px;background:#efe5cf;border-left:3px solid #1f2d4d"></span>Added</span><span><span class="sw" style="width:20px;height:12px;border-bottom:2px solid #c9b48d"></span>Reworded</span>
+   <label class="toggle"><input type="checkbox" id="showchg" checked> Show changes</label></div>
+  <div class="paper" id="paper"></div>
+ </div>
+ <div><div class="card"><h2>What changed</h2><ul class="changes" id="changes"></ul></div>
   <div class="card"><button class="btn ghost" id="dl" style="width:100%;justify-content:center">⬇ Download PDF</button></div></div>
 </div>
 <div id="err4"></div>
 <div class="actions"><button class="btn ghost" data-back="3">← Back</button><button class="btn" id="go4" disabled>See recommended jobs →</button></div>
 </section>
 
-<!-- STEP 5 -->
+<!-- STEP 5: jobs -->
 <section id="s5" class="hidden">
 <h1>Recommended for you</h1>
-<p class="lead">Top 5 Product Manager roles in France. <b>Fit score</b> = 60% how well you match the job's requirements + 40% how well the job matches your preferences.</p>
-<div class="card" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-size:14px">Applications will use this email:</span><input type="email" id="appemail" style="max-width:300px"><span class="muted" style="font-size:12.5px">Your confirmation email goes here. You can change it on the job page too.</span></div>
-<div id="jobs"><div class="card center"><div class="loading" style="justify-content:center"><div class="spin"></div>Scoring 30 open roles…</div></div></div>
+<p class="lead">Top 5 Product Manager roles in France. <b>Fit score</b> = 60% how well you match the job's requirements + 40% how well the job matches your preferences. Seniority is judged on your years of experience, not job titles.</p>
+<div class="card"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-size:14px">Applications will use this email:</span><input type="email" id="appemail" style="max-width:300px" placeholder="you@example.com"><span class="muted" style="font-size:12.5px">Your confirmation email goes here.</span></div>
+ <div id="emailnote" style="margin-top:8px"></div></div>
+<div id="jobs"></div>
 <div id="err5"></div>
 <div class="actions"><button class="btn ghost" data-back="4">← Back to resume</button></div>
 </section>

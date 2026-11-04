@@ -4,7 +4,7 @@
 <div class="card">
 <div class="jh"><div class="avatar">{{ job.company[:2]|upper }}</div><div><h1>{{ job.title }}</h1><div class="muted">{{ job.company }} · {{ job.location }}</div></div></div>
 <div class="tags"><span class="tag pay">€{{ job.salary_min }}k–{{ job.salary_max }}k gross / year</span><span class="tag">{{ job.work_mode_label }}</span>
-<span class="tag">{{ job.company_size_label }}</span><span class="tag">{{ job.company_type }}</span><span class="tag">{{ job.language }}</span></div>
+<span class="tag">{{ job.min_years }}–{{ job.max_years }} yrs experience</span><span class="tag">{{ job.company_size_label }}</span><span class="tag">{{ job.language }}</span></div>
 <h4>About {{ job.company }}</h4><p>{{ job.company_blurb }}</p>
 <h4>What you'll do</h4><ul>{% for r in job.responsibilities %}<li>{{ r }}</li>{% endfor %}</ul>
 <h4>What we're looking for</h4><ul>{% for r in job.requirements %}<li>{{ r }}</li>{% endfor %}</ul>
@@ -18,7 +18,6 @@
 <label>Full name *</label><input type="text" name="name" required value="{{ pf.name or '' }}">
 <label>Email * <span class="muted" style="font-weight:400">(your confirmation goes here)</span></label><input type="email" name="email" required value="{{ pf.email or '' }}">
 <label>Phone</label><input type="tel" name="phone" value="{{ pf.phone or '' }}">
-<label>LinkedIn URL</label><input type="text" name="linkedin" value="{{ pf.linkedin or '' }}">
 <label>Resume (PDF)</label>
 {% if has_resume %}<div class="filebox">📄 <a href="/prefill-resume/{{ token }}" target="_blank">Tailored resume.pdf</a> is attached. <span class="muted">Upload a different file to replace it:</span><br><input type="file" name="resume" accept=".pdf" style="margin-top:6px"></div>
 {% else %}<input type="file" name="resume" accept=".pdf" required>{% endif %}

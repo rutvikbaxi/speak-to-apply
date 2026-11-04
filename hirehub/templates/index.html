@@ -11,6 +11,6 @@
 <a class="job" href="/jobs/{{ j.id }}"><div class="avatar">{{ j.company[:2]|upper }}</div>
 <div><h3>{{ j.title }}</h3><div class="co">{{ j.company }} · {{ j.location }}</div>
 <div class="tags"><span class="tag pay">€{{ j.salary_min }}k–{{ j.salary_max }}k</span><span class="tag">{{ j.work_mode_label }}</span>
-<span class="tag">{{ size_label[j.company_size] }}</span><span class="tag">{{ j.company_type }}</span><span class="tag">{{ j.sector }}</span></div></div>
+<span class="tag">{{ j.min_years }}–{{ j.max_years }} yrs exp.</span><span class="tag">{{ size_label[j.company_size] }}</span><span class="tag">{{ j.sector }}</span></div></div>
 <div class="when">{{ j.posted_days_ago }}d ago</div></a>{% endfor %}</div>
 {% endblock %}

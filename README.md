@@ -6,10 +6,10 @@ Built as a lean-startup course prototype. Two web apps:
 
 | App | Port | What it does |
 |---|---|---|
-| `speak/` **Speak-to-Apply** | 8002 | Paste LinkedIn text, upload a PDF, or dictate → 0–3 multiple-choice follow-ups + job preferences → voice "anything new?" → editable resume + PDF → top 5 jobs with a fit score out of 10 → pre-filled application |
+| `speak/` **Speak-to-Apply** | 8002 | Paste LinkedIn text, upload a PDF, or dictate → voice "anything new?" → job preferences + 0–3 multiple-choice follow-ups → editable resume with added/reworded parts highlighted, + PDF → top 5 jobs with a fit score out of 10 → pre-filled application |
 | `hirehub/` **HireHub** | 8001 | Fictional job portal with 30 Product Manager jobs in France. Application form, pre-fill API, confirmation email (Brevo), recruiter view at `/recruiter` |
 
-**Fit score** = 60% requirements match (experience, domain and skills, education, language) + 40% preference match (pay, location, remote/office, company size, startup/MNC, level).
+**Fit score** = 60% requirements match (years of experience, domain and skills, education, language) + 40% preference match (pay, location, remote/office, company size). Seniority is judged on years of experience only, never on job titles.
 
 ## Stack (open-weight models, free tiers)
 - FastAPI + vanilla JS, SQLite

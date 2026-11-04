@@ -30,7 +30,12 @@ def chat_json(system: str, user: str, temperature=0.3, max_tokens=4000) -> dict:
                 if r.status_code == 429:
                     last = "rate limited"; time.sleep(2 + attempt * 3); continue
                 r.raise_for_status()
-                return json.loads(r.json()["choices"][0]["message"]["content"])
+                out = json.loads(r.json()["choices"][0]["message"]["content"])
+                if isinstance(out, list) and len(out) == 1 and isinstance(out[0], dict):
+                    out = out[0]
+                if not isinstance(out, dict):
+                    raise ValueError("model returned non-object JSON")
+                return out
             except Exception as e:
                 last = e; log.warning("LLM %s failed: %s", model, e)
     raise RuntimeError(f"LLM unavailable: {last}")
@@ -80,9 +85,14 @@ def mock_build(profile, addendum):
                                 "bullets": ["Own self-serve onboarding; raised activation from 22% to 31% in six months",
                                             "Launched an AI report-building assistant used by ~4,000 customers"]})
         p["total_years_experience"] = 5
-        changes += ["Added new role: Product Manager at Northwind Analytics (2025–Present)", "Added activation metric 22% → 31%"]
+        p["experience"][1]["end"] = "Dec 2024"
+        changes += [{"what": "Added new role: Product Manager at Northwind Analytics (2025–Present)", "source": "your voice note"},
+                    {"what": "Ended Kestrel Software role in Dec 2024", "source": "your voice note"}]
     p["experience"].sort(key=lambda e: e["end"] == "Present", reverse=True)
-    changes.append("Added impact framing from your multiple-choice answers")
+    p["experience"][-1]["bullets"][0] = "Owned the reporting module roadmap, growing weekly active usage"
+    p["skills"] = p["skills"] + ["Onboarding optimisation"]
+    p["headline"] = "Product Manager · Onboarding, Data & AI"
+    changes.append({"what": "Added usage-growth framing to the Kestrel roadmap bullet", "source": "your answers"})
     return {"profile": p, "changes": changes}
 
 
