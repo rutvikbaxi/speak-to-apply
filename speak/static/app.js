@@ -235,7 +235,7 @@ async function applyTo(b) {
   const email = $("#appemail").value.trim();
   if (!EMAIL_RE.test(email)) { $("#emailnote").innerHTML = `<span class="warn">Add a valid email first. Your confirmation goes there.</span>`; $("#appemail").focus(); return; }
   const win = window.open("", "_blank");  // open synchronously so popup blockers allow it
-  if (win) win.document.write(`<p style="font-family:Helvetica,Arial,sans-serif;padding:40px;color:#6e6e6e">Tailoring your resume and cover note for this job…</p>`);
+  if (win) win.document.write(`<p style="font-family:Georgia,serif;padding:40px;color:#6b6b6b;background:#FFFBF4">Tailoring your resume and cover note for this job…</p>`);
   b.disabled = true; const old = b.innerHTML; b.innerHTML = `<span class="spin" style="border-color:#ffffff66;border-top-color:#fff"></span> Preparing…`;
   try {
     const d = await api("/api/apply", {profile: S.profile, prefs: S.prefs, job_id: b.dataset.apply, email});

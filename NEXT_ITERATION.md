@@ -23,7 +23,7 @@
 - When the voice note adds a new current role, any older "Present" role is ended the month before it starts, and this is listed as a change the user can edit.
 
 # Iteration 3: notes
-(Logged 4 Nov 2026. Not implemented yet.)
+(Logged and implemented 4 Nov 2026.)
 
-- [ ] Font: switch to a serif font (replacing Helvetica) across both apps and the resume PDF.
-- [ ] Palette reference shared by Rutvik: #10375C (navy), #1E81B0 (blue), #B4E1FA (light blue), #F1E0C5 (beige), #FFFBF4 (cream-white). The current build uses a different navy/beige/cream/grey set. Confirm whether to switch to this palette.
+- [x] Font: serif (Georgia on Mac/Windows) across both apps, the confirmation email and the resume PDF.
+- [x] Palette from Rutvik's reference: #10375C navy (buttons, headings, scores), #1E81B0 blue (links, hover), #B4E1FA light blue (pay tags, strong-fit factors), #F1E0C5 beige (highlights, banners), #FFFBF4 cream (page background). Black and grey are used for body text.
