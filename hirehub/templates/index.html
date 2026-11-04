@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block body %}
+<section class="hero"><h1>Product Manager jobs in France</h1><p>{{ total }} open roles at startups and global companies</p>
+<form class="filters" method="get">
+<input type="text" name="q" value="{{ q }}" placeholder="Search title, company or sector">
+<select name="level"><option value="">All levels</option>{% for l in levels %}<option {% if l==level %}selected{% endif %}>{{ l }}</option>{% endfor %}</select>
+<select name="city"><option value="">All cities</option>{% for c in cities %}<option {% if c==city %}selected{% endif %}>{{ c }}</option>{% endfor %}</select>
+<select name="mode"><option value="">Any work mode</option>{% for m in ["Remote","Hybrid","On-site"] %}<option {% if m==mode %}selected{% endif %}>{{ m }}</option>{% endfor %}</select>
+<button class="btn light">Search</button></form></section>
+<div class="count">{{ jobs|length }} job{{ '' if jobs|length==1 else 's' }}</div>
+<div class="jobs">{% for j in jobs %}
+<a class="job" href="/jobs/{{ j.id }}"><div class="avatar">{{ j.company[:2]|upper }}</div>
+<div><h3>{{ j.title }}</h3><div class="co">{{ j.company }} · {{ j.location }}</div>
+<div class="tags"><span class="tag pay">€{{ j.salary_min }}k–{{ j.salary_max }}k</span><span class="tag">{{ j.work_mode_label }}</span>
+<span class="tag">{{ size_label[j.company_size] }}</span><span class="tag">{{ j.company_type }}</span><span class="tag">{{ j.sector }}</span></div></div>
+<div class="when">{{ j.posted_days_ago }}d ago</div></a>{% endfor %}</div>
+{% endblock %}

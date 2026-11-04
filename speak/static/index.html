@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speak-to-Apply</title><link rel="stylesheet" href="/static/app.css"></head><body><div class="wrap">
+<div class="brand"><span class="dot"></span>Speak-to-Apply</div>
+<div class="stepper" id="stepper"><div>1 · About you</div><div>2 · Quick questions</div><div>3 · Anything new?</div><div>4 · Your resume</div><div>5 · Recommended jobs</div></div>
+
+<!-- STEP 1 -->
+<section id="s1">
+<h1>Tell us about your career</h1>
+<p class="lead">Use any mix of the three. More input gives a better resume. Nothing is sent anywhere until you continue.</p>
+<div class="grid3">
+ <div class="card src" id="c-li"><h3><span class="ic">in</span>Paste LinkedIn</h3>
+  <div class="nudge">Open your LinkedIn profile page → press <kbd>Ctrl</kbd>+<kbd>A</kbd> then <kbd>Ctrl</kbd>+<kbd>C</kbd> (<kbd>⌘</kbd>+<kbd>A</kbd>, <kbd>⌘</kbd>+<kbd>C</kbd> on Mac) → paste here. Messy text is fine.</div>
+  <textarea id="li" placeholder="Paste your LinkedIn profile text…"></textarea></div>
+ <div class="card src" id="c-pdf"><h3><span class="ic">📄</span>Upload a PDF</h3>
+  <p class="muted" style="font-size:13px;margin:4px 0">Old resume, portfolio, or any document about your work.</p>
+  <label class="drop" id="drop"><input type="file" id="pdf" accept=".pdf" hidden><span id="pdfname">Click to choose a PDF</span></label>
+  <div id="pdfstatus" class="muted" style="font-size:12.5px;margin-top:6px"></div></div>
+ <div class="card src" id="c-dict"><h3><span class="ic">🎙️</span>Dictate</h3>
+  <p class="muted" style="font-size:13px;margin:4px 0">Talk through your roles, wins and skills. Up to 10 minutes.</p>
+  <div class="rec" id="rec1"></div></div>
+</div>
+<div id="err1"></div>
+<div class="actions"><button class="btn" id="go1" disabled>Continue →</button></div>
+</section>
+
+<!-- STEP 2 -->
+<section id="s2" class="hidden">
+<h1>A few quick questions</h1>
+<p class="lead">Your job preferences shape the recommendations. Follow-ups only appear if something important is missing.</p>
+<div class="card"><h2>Job preferences</h2><div id="prefs"></div></div>
+<div class="card"><h2>Follow-ups <span class="sub">· based on what you shared</span></h2><div id="fups"><div class="loading"><div class="spin"></div>Reading your information and checking for gaps…</div></div></div>
+<div id="err2"></div>
+<div class="actions"><button class="btn ghost" data-back="1">← Back</button><button class="btn" id="go2" disabled>Continue →</button></div>
+</section>
+
+<!-- STEP 3 -->
+<section id="s3" class="hidden">
+<h1>Anything new since then?</h1>
+<p class="lead">A new job, promotion, project or certification that isn't in what you shared? Just say it. Voice only. Skip if nothing changed.</p>
+<div class="card center"><div class="rec" id="rec2"></div></div>
+<div id="err3"></div>
+<div class="actions"><button class="btn ghost" data-back="2">← Back</button><button class="btn ghost" id="skip3">Skip</button><button class="btn" id="go3" disabled>Build my resume →</button></div>
+</section>
+
+<!-- STEP 4 -->
+<section id="s4" class="hidden">
+<h1>Your resume</h1>
+<p class="lead">Click any text to edit it. Check that everything is accurate before you apply.</p>
+<div id="building" class="card center"><div class="loading" style="justify-content:center"><div class="spin"></div>Building your resume…</div></div>
+<div class="resume-wrap hidden" id="resumewrap">
+ <div class="paper" id="paper"></div>
+ <div><div class="card"><h2>What we added</h2><ul class="changes" id="changes"></ul></div>
+  <div class="card"><button class="btn ghost" id="dl" style="width:100%;justify-content:center">⬇ Download PDF</button></div></div>
+</div>
+<div id="err4"></div>
+<div class="actions"><button class="btn ghost" data-back="3">← Back</button><button class="btn" id="go4" disabled>See recommended jobs →</button></div>
+</section>
+
+<!-- STEP 5 -->
+<section id="s5" class="hidden">
+<h1>Recommended for you</h1>
+<p class="lead">Top 5 Product Manager roles in France. <b>Fit score</b> = 60% how well you match the job's requirements + 40% how well the job matches your preferences.</p>
+<div class="card" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span style="font-size:14px">Applications will use this email:</span><input type="email" id="appemail" style="max-width:300px"><span class="muted" style="font-size:12.5px">Your confirmation email goes here. You can change it on the job page too.</span></div>
+<div id="jobs"><div class="card center"><div class="loading" style="justify-content:center"><div class="spin"></div>Scoring 30 open roles…</div></div></div>
+<div id="err5"></div>
+<div class="actions"><button class="btn ghost" data-back="4">← Back to resume</button></div>
+</section>
+</div>
+<script src="/static/app.js"></script></body></html>

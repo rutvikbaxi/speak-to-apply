@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% block title %}{{ job.title }} · {{ job.company }} · HireHub{% endblock %}{% block body %}
+<p><a href="/">← All jobs</a></p>
+<div class="grid2">
+<div class="card">
+<div class="jh"><div class="avatar">{{ job.company[:2]|upper }}</div><div><h1>{{ job.title }}</h1><div class="muted">{{ job.company }} · {{ job.location }}</div></div></div>
+<div class="tags"><span class="tag pay">€{{ job.salary_min }}k–{{ job.salary_max }}k gross / year</span><span class="tag">{{ job.work_mode_label }}</span>
+<span class="tag">{{ job.company_size_label }}</span><span class="tag">{{ job.company_type }}</span><span class="tag">{{ job.language }}</span></div>
+<h4>About {{ job.company }}</h4><p>{{ job.company_blurb }}</p>
+<h4>What you'll do</h4><ul>{% for r in job.responsibilities %}<li>{{ r }}</li>{% endfor %}</ul>
+<h4>What we're looking for</h4><ul>{% for r in job.requirements %}<li>{{ r }}</li>{% endfor %}</ul>
+<h4>Nice to have</h4><ul>{% for r in job.nice_to_have %}<li>{{ r }}</li>{% endfor %}</ul>
+</div>
+<div class="card {% if pf %}prefilled{% endif %}" id="apply">
+<h2>Apply for this job</h2>
+{% if pf %}<div class="banner"><b>Pre-filled by Speak-to-Apply.</b> Review every field and edit anything before you submit. Nothing is sent until you click Submit.</div>{% endif %}
+<form method="post" action="/jobs/{{ job.id }}/apply" enctype="multipart/form-data">
+<input type="hidden" name="token" value="{{ token }}">
+<label>Full name *</label><input type="text" name="name" required value="{{ pf.name or '' }}">
+<label>Email * <span class="muted" style="font-weight:400">(your confirmation goes here)</span></label><input type="email" name="email" required value="{{ pf.email or '' }}">
+<label>Phone</label><input type="tel" name="phone" value="{{ pf.phone or '' }}">
+<label>LinkedIn URL</label><input type="text" name="linkedin" value="{{ pf.linkedin or '' }}">
+<label>Resume (PDF)</label>
+{% if has_resume %}<div class="filebox">📄 <a href="/prefill-resume/{{ token }}" target="_blank">Tailored resume.pdf</a> is attached. <span class="muted">Upload a different file to replace it:</span><br><input type="file" name="resume" accept=".pdf" style="margin-top:6px"></div>
+{% else %}<input type="file" name="resume" accept=".pdf" required>{% endif %}
+<label>Cover note</label><textarea name="cover" rows="7">{{ pf.cover or '' }}</textarea>
+{% for qn in job.screening %}<label>{{ qn }}</label><input type="text" name="a{{ loop.index0 }}" value="{{ (pf.answers or [])[loop.index0] if pf.answers and pf.answers|length > loop.index0 else '' }}">{% endfor %}
+<p style="margin-top:18px"><button class="btn big" type="submit">Submit application</button></p>
+</form></div></div>
+{% endblock %}

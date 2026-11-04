@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block body %}
+<div class="card success"><div class="tick">✓</div>
+<h1 style="margin:0 0 6px">Application submitted</h1>
+<p>You applied for <b>{{ job.title }}</b> at <b>{{ job.company }}</b>.</p>
+<p class="muted">Reference {{ a.id[:8]|upper }}</p>
+{% if a.email_status == 'sent' %}<p>📧 A confirmation email is on its way to <b>{{ a.email }}</b>.</p>
+{% else %}<p class="muted">Confirmation email could not be sent ({{ a.email_status }}).</p>{% endif %}
+<p style="margin-top:20px"><a class="btn" href="/">Browse more jobs</a></p></div>
+{% endblock %}

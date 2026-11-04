@@ -1,0 +1,1350 @@
+[
+ {
+  "id": "pm-01",
+  "title": "Associate Product Manager – Payments & checkout",
+  "level": "Associate Product Manager",
+  "min_years": 0,
+  "max_years": 2,
+  "company": "Lumio Pay",
+  "sector": "Fintech",
+  "company_blurb": "Lumio Pay builds payments, lending and finance tools in France and across Europe.",
+  "company_size": "seriesAB",
+  "company_size_label": "Series A–B (50–200)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 45,
+  "salary_max": 60,
+  "pedigree": "none",
+  "language": "English only",
+  "requirements": [
+   "0–2 years in product, consulting, engineering or analytics",
+   "Experience with payments, banking or regulated products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Comfort with KPIs like conversion, fraud rate and NPS",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for payments & checkout end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Lumio Pay?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-02",
+  "title": "Product Manager – Onboarding & growth",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Banque Azur Digital",
+  "sector": "Fintech",
+  "company_blurb": "Banque Azur Digital builds payments, lending and finance tools in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 65,
+  "salary_max": 85,
+  "pedigree": "preferred",
+  "language": "French C1 / native",
+  "requirements": [
+   "2+ years of product management experience",
+   "Experience with payments, banking or regulated products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French C1 / native French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Comfort with KPIs like conversion, fraud rate and NPS",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for onboarding & growth end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Banque Azur Digital?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-03",
+  "title": "Product Manager – Core platform",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Créditel",
+  "sector": "Fintech",
+  "company_blurb": "Créditel builds payments, lending and finance tools in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "startup",
+  "city": "Lyon",
+  "location": "Lyon",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 55,
+  "salary_max": 75,
+  "pedigree": "none",
+  "language": "French B2",
+  "requirements": [
+   "2+ years of product management experience",
+   "Experience with payments, banking or regulated products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Comfort with KPIs like conversion, fraud rate and NPS",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for core platform end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Créditel?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-04",
+  "title": "Senior Product Manager – Data & insights",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Vitalis Santé",
+  "sector": "Healthtech",
+  "company_blurb": "Vitalis Santé builds digital health for patients and clinicians in France and across Europe.",
+  "company_size": "seriesAB",
+  "company_size_label": "Series A–B (50–200)",
+  "company_type": "startup",
+  "city": "Sophia Antipolis",
+  "location": "Sophia Antipolis",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (2 days office)",
+  "salary_min": 75,
+  "salary_max": 100,
+  "pedigree": "required",
+  "language": "French B2",
+  "requirements": [
+   "5+ years of product management experience",
+   "Understanding of regulated environments (GDPR, health data)",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Degree from a top engineering or business school (Grande École, IIT/IIM or equivalent) required",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Empathy for clinical users and patient journeys",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for data & insights end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Vitalis Santé?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-05",
+  "title": "Product Manager – Mobile app",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "MedOrbit",
+  "sector": "Healthtech",
+  "company_blurb": "MedOrbit builds digital health for patients and clinicians in France and across Europe.",
+  "company_size": "seed",
+  "company_size_label": "Seed (under 20 people)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 52,
+  "salary_max": 72,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "2+ years of product management experience",
+   "Understanding of regulated environments (GDPR, health data)",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Empathy for clinical users and patient journeys",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for mobile app end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in MedOrbit?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-06",
+  "title": "Senior Product Manager – Pricing & monetisation",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Pharmalys Group",
+  "sector": "Healthtech",
+  "company_blurb": "Pharmalys Group builds digital health for patients and clinicians in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 85,
+  "salary_max": 110,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "5+ years of product management experience",
+   "Understanding of regulated environments (GDPR, health data)",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Empathy for clinical users and patient journeys",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for pricing & monetisation end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Pharmalys Group?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-07",
+  "title": "Group Product Manager – Marketplace",
+  "level": "Group Product Manager",
+  "min_years": 8,
+  "max_years": 15,
+  "company": "Panier Vert",
+  "sector": "E-commerce",
+  "company_blurb": "Panier Vert builds online retail and marketplaces in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "startup",
+  "city": "Lille",
+  "location": "Lille",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 100,
+  "salary_max": 135,
+  "pedigree": "preferred",
+  "language": "French C1 / native",
+  "requirements": [
+   "8+ years of product management experience",
+   "Strong A/B testing and funnel optimisation skills",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French C1 / native French (team language is French)",
+   "Experience managing a team of PMs"
+  ],
+  "nice_to_have": [
+   "Experience with checkout, search or recommendations",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for marketplace end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Panier Vert?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-08",
+  "title": "Associate Product Manager – AI assistant",
+  "level": "Associate Product Manager",
+  "min_years": 0,
+  "max_years": 2,
+  "company": "Marché Plus",
+  "sector": "E-commerce",
+  "company_blurb": "Marché Plus builds online retail and marketplaces in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Paris",
+  "location": "Paris",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 50,
+  "salary_max": 65,
+  "pedigree": "preferred",
+  "language": "French B2",
+  "requirements": [
+   "0–2 years in product, consulting, engineering or analytics",
+   "Strong A/B testing and funnel optimisation skills",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Experience with checkout, search or recommendations",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for ai assistant end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Marché Plus?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-09",
+  "title": "Product Manager – Partner integrations",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Atelier Nova",
+  "sector": "B2B SaaS",
+  "company_blurb": "Atelier Nova builds software for businesses in France and across Europe.",
+  "company_size": "seriesAB",
+  "company_size_label": "Series A–B (50–200)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 60,
+  "salary_max": 80,
+  "pedigree": "required",
+  "language": "English only",
+  "requirements": [
+   "2+ years of product management experience",
+   "Experience with B2B discovery and customer interviews",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Degree from a top engineering or business school (Grande École, IIT/IIM or equivalent) required",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Ability to work with sales and customer success on roadmap",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for partner integrations end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Atelier Nova?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-10",
+  "title": "Senior Product Manager – Customer experience",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Fluxa",
+  "sector": "B2B SaaS",
+  "company_blurb": "Fluxa builds software for businesses in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "startup",
+  "city": "Toulouse",
+  "location": "Toulouse",
+  "work_mode": "On-site",
+  "work_mode_label": "On-site",
+  "salary_min": 75,
+  "salary_max": 100,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "5+ years of product management experience",
+   "Experience with B2B discovery and customer interviews",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Ability to work with sales and customer success on roadmap",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for customer experience end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Fluxa?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-11",
+  "title": "Associate Product Manager – Internal tools",
+  "level": "Associate Product Manager",
+  "min_years": 0,
+  "max_years": 2,
+  "company": "Quantaro Systems",
+  "sector": "B2B SaaS",
+  "company_blurb": "Quantaro Systems builds software for businesses in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Marseille",
+  "location": "Marseille",
+  "work_mode": "On-site",
+  "work_mode_label": "On-site",
+  "salary_min": 45,
+  "salary_max": 60,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "0–2 years in product, consulting, engineering or analytics",
+   "Experience with B2B discovery and customer interviews",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Ability to work with sales and customer success on roadmap",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for internal tools end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Quantaro Systems?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-12",
+  "title": "Product Manager – Personalisation",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Mobilia",
+  "sector": "Mobility",
+  "company_blurb": "Mobilia builds transport, logistics and delivery in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Paris",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (2 days office)",
+  "salary_min": 60,
+  "salary_max": 80,
+  "pedigree": "preferred",
+  "language": "French C1 / native",
+  "requirements": [
+   "2+ years of product management experience",
+   "Experience with operations-heavy or logistics products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French C1 / native French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Comfort with data on routing, supply and demand",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for personalisation end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Mobilia?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-13",
+  "title": "Product Manager – Payments & checkout",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "TransEuropa Logistics",
+  "sector": "Mobility",
+  "company_blurb": "TransEuropa Logistics builds transport, logistics and delivery in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Lyon",
+  "location": "Lyon",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (2 days office)",
+  "salary_min": 60,
+  "salary_max": 80,
+  "pedigree": "preferred",
+  "language": "French B2",
+  "requirements": [
+   "2+ years of product management experience",
+   "Experience with operations-heavy or logistics products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Comfort with data on routing, supply and demand",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for payments & checkout end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in TransEuropa Logistics?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-14",
+  "title": "Senior Product Manager – Onboarding & growth",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Cobalt Labs",
+  "sector": "AI / ML",
+  "company_blurb": "Cobalt Labs builds AI-native products and LLM tools in France and across Europe.",
+  "company_size": "seed",
+  "company_size_label": "Seed (under 20 people)",
+  "company_type": "startup",
+  "city": "Nantes",
+  "location": "Nantes",
+  "work_mode": "On-site",
+  "work_mode_label": "On-site",
+  "salary_min": 67,
+  "salary_max": 92,
+  "pedigree": "required",
+  "language": "English only",
+  "requirements": [
+   "5+ years of product management experience",
+   "Hands-on familiarity with LLMs, evals or ML products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Degree from a top engineering or business school (Grande École, IIT/IIM or equivalent) required",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Ability to define quality metrics for AI features",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for onboarding & growth end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Cobalt Labs?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-15",
+  "title": "Product Manager – Core platform",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Sablier AI",
+  "sector": "AI / ML",
+  "company_blurb": "Sablier AI builds AI-native products and LLM tools in France and across Europe.",
+  "company_size": "seriesAB",
+  "company_size_label": "Series A–B (50–200)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Paris",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 60,
+  "salary_max": 80,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "2+ years of product management experience",
+   "Hands-on familiarity with LLMs, evals or ML products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Ability to define quality metrics for AI features",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for core platform end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Sablier AI?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-16",
+  "title": "Senior Product Manager – Data & insights",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Neuronis",
+  "sector": "AI / ML",
+  "company_blurb": "Neuronis builds AI-native products and LLM tools in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Paris",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (2 days office)",
+  "salary_min": 80,
+  "salary_max": 105,
+  "pedigree": "none",
+  "language": "English only",
+  "requirements": [
+   "5+ years of product management experience",
+   "Hands-on familiarity with LLMs, evals or ML products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Ability to define quality metrics for AI features",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for data & insights end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Neuronis?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-17",
+  "title": "Group Product Manager – Mobile app",
+  "level": "Group Product Manager",
+  "min_years": 8,
+  "max_years": 15,
+  "company": "Maison Orée",
+  "sector": "Luxury & Retail",
+  "company_blurb": "Maison Orée builds premium retail and clienteling in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Bordeaux",
+  "location": "Bordeaux",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (2 days office)",
+  "salary_min": 105,
+  "salary_max": 140,
+  "pedigree": "preferred",
+  "language": "French C1 / native",
+  "requirements": [
+   "8+ years of product management experience",
+   "Taste for premium customer experience",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French C1 / native French (team language is French)",
+   "Experience managing a team of PMs"
+  ],
+  "nice_to_have": [
+   "Experience with omnichannel (store + online) journeys",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for mobile app end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Maison Orée?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-18",
+  "title": "Associate Product Manager – Pricing & monetisation",
+  "level": "Associate Product Manager",
+  "min_years": 0,
+  "max_years": 2,
+  "company": "Rive Gauche Retail",
+  "sector": "Luxury & Retail",
+  "company_blurb": "Rive Gauche Retail builds premium retail and clienteling in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "MNC",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 50,
+  "salary_max": 65,
+  "pedigree": "preferred",
+  "language": "French B2",
+  "requirements": [
+   "0–2 years in product, consulting, engineering or analytics",
+   "Taste for premium customer experience",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Experience with omnichannel (store + online) journeys",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for pricing & monetisation end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Rive Gauche Retail?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-19",
+  "title": "Product Manager – Marketplace",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Solenne Energy",
+  "sector": "Energy & Climate",
+  "company_blurb": "Solenne Energy builds energy transition and climate tech in France and across Europe.",
+  "company_size": "seriesAB",
+  "company_size_label": "Series A–B (50–200)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Paris",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 60,
+  "salary_max": 80,
+  "pedigree": "required",
+  "language": "French B2",
+  "requirements": [
+   "2+ years of product management experience",
+   "Interest in sustainability and energy markets",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Degree from a top engineering or business school (Grande École, IIT/IIM or equivalent) required",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Experience with IoT or data-heavy platforms",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for marketplace end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Solenne Energy?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-20",
+  "title": "Senior Product Manager – AI assistant",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Voltaire Grid",
+  "sector": "Energy & Climate",
+  "company_blurb": "Voltaire Grid builds energy transition and climate tech in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Lyon",
+  "location": "Lyon",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 80,
+  "salary_max": 105,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "5+ years of product management experience",
+   "Interest in sustainability and energy markets",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Experience with IoT or data-heavy platforms",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for ai assistant end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Voltaire Grid?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-21",
+  "title": "Associate Product Manager – Partner integrations",
+  "level": "Associate Product Manager",
+  "min_years": 0,
+  "max_years": 2,
+  "company": "Lumio Pay",
+  "sector": "Fintech",
+  "company_blurb": "Lumio Pay builds payments, lending and finance tools in France and across Europe.",
+  "company_size": "seriesAB",
+  "company_size_label": "Series A–B (50–200)",
+  "company_type": "startup",
+  "city": "Sophia Antipolis",
+  "location": "Remote · Sophia Antipolis HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 40,
+  "salary_max": 55,
+  "pedigree": "none",
+  "language": "English only",
+  "requirements": [
+   "0–2 years in product, consulting, engineering or analytics",
+   "Experience with payments, banking or regulated products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Comfort with KPIs like conversion, fraud rate and NPS",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for partner integrations end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Lumio Pay?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-22",
+  "title": "Product Manager – Customer experience",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Banque Azur Digital",
+  "sector": "Fintech",
+  "company_blurb": "Banque Azur Digital builds payments, lending and finance tools in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 65,
+  "salary_max": 85,
+  "pedigree": "preferred",
+  "language": "French C1 / native",
+  "requirements": [
+   "2+ years of product management experience",
+   "Experience with payments, banking or regulated products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French C1 / native French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Comfort with KPIs like conversion, fraud rate and NPS",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for customer experience end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Banque Azur Digital?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-23",
+  "title": "Product Manager – Internal tools",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Créditel",
+  "sector": "Fintech",
+  "company_blurb": "Créditel builds payments, lending and finance tools in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Paris",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 60,
+  "salary_max": 80,
+  "pedigree": "none",
+  "language": "French B2",
+  "requirements": [
+   "2+ years of product management experience",
+   "Experience with payments, banking or regulated products",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Comfort with KPIs like conversion, fraud rate and NPS",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for internal tools end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Créditel?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-24",
+  "title": "Senior Product Manager – Personalisation",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Vitalis Santé",
+  "sector": "Healthtech",
+  "company_blurb": "Vitalis Santé builds digital health for patients and clinicians in France and across Europe.",
+  "company_size": "seriesAB",
+  "company_size_label": "Series A–B (50–200)",
+  "company_type": "startup",
+  "city": "Lille",
+  "location": "Lille",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (2 days office)",
+  "salary_min": 75,
+  "salary_max": 100,
+  "pedigree": "required",
+  "language": "French B2",
+  "requirements": [
+   "5+ years of product management experience",
+   "Understanding of regulated environments (GDPR, health data)",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Degree from a top engineering or business school (Grande École, IIT/IIM or equivalent) required",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Empathy for clinical users and patient journeys",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for personalisation end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Vitalis Santé?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-25",
+  "title": "Product Manager – Payments & checkout",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "MedOrbit",
+  "sector": "Healthtech",
+  "company_blurb": "MedOrbit builds digital health for patients and clinicians in France and across Europe.",
+  "company_size": "seed",
+  "company_size_label": "Seed (under 20 people)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 52,
+  "salary_max": 72,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "2+ years of product management experience",
+   "Understanding of regulated environments (GDPR, health data)",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Empathy for clinical users and patient journeys",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for payments & checkout end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in MedOrbit?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-26",
+  "title": "Senior Product Manager – Onboarding & growth",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Pharmalys Group",
+  "sector": "Healthtech",
+  "company_blurb": "Pharmalys Group builds digital health for patients and clinicians in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 85,
+  "salary_max": 110,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "5+ years of product management experience",
+   "Understanding of regulated environments (GDPR, health data)",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Empathy for clinical users and patient journeys",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for onboarding & growth end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Pharmalys Group?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-27",
+  "title": "Group Product Manager – Core platform",
+  "level": "Group Product Manager",
+  "min_years": 8,
+  "max_years": 15,
+  "company": "Panier Vert",
+  "sector": "E-commerce",
+  "company_blurb": "Panier Vert builds online retail and marketplaces in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "startup",
+  "city": "Toulouse",
+  "location": "Toulouse",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 100,
+  "salary_max": 135,
+  "pedigree": "preferred",
+  "language": "French C1 / native",
+  "requirements": [
+   "8+ years of product management experience",
+   "Strong A/B testing and funnel optimisation skills",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French C1 / native French (team language is French)",
+   "Experience managing a team of PMs"
+  ],
+  "nice_to_have": [
+   "Experience with checkout, search or recommendations",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for core platform end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Panier Vert?"
+  ],
+  "posted_days_ago": 15
+ },
+ {
+  "id": "pm-28",
+  "title": "Associate Product Manager – Data & insights",
+  "level": "Associate Product Manager",
+  "min_years": 0,
+  "max_years": 2,
+  "company": "Marché Plus",
+  "sector": "E-commerce",
+  "company_blurb": "Marché Plus builds online retail and marketplaces in France and across Europe.",
+  "company_size": "large",
+  "company_size_label": "Large company (1,000+)",
+  "company_type": "MNC",
+  "city": "Marseille",
+  "location": "Marseille",
+  "work_mode": "Hybrid",
+  "work_mode_label": "Hybrid (3 days office)",
+  "salary_min": 45,
+  "salary_max": 60,
+  "pedigree": "preferred",
+  "language": "French B2",
+  "requirements": [
+   "0–2 years in product, consulting, engineering or analytics",
+   "Strong A/B testing and funnel optimisation skills",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "French B2 French (team language is French)"
+  ],
+  "nice_to_have": [
+   "Experience with checkout, search or recommendations",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for data & insights end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Marché Plus?"
+  ],
+  "posted_days_ago": 1
+ },
+ {
+  "id": "pm-29",
+  "title": "Product Manager – Mobile app",
+  "level": "Product Manager",
+  "min_years": 2,
+  "max_years": 5,
+  "company": "Atelier Nova",
+  "sector": "B2B SaaS",
+  "company_blurb": "Atelier Nova builds software for businesses in France and across Europe.",
+  "company_size": "seriesAB",
+  "company_size_label": "Series A–B (50–200)",
+  "company_type": "startup",
+  "city": "Paris",
+  "location": "Remote · Paris HQ",
+  "work_mode": "Remote",
+  "work_mode_label": "Remote (France)",
+  "salary_min": 60,
+  "salary_max": 80,
+  "pedigree": "required",
+  "language": "English only",
+  "requirements": [
+   "2+ years of product management experience",
+   "Experience with B2B discovery and customer interviews",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Degree from a top engineering or business school (Grande École, IIT/IIM or equivalent) required",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Ability to work with sales and customer success on roadmap",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for mobile app end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Atelier Nova?"
+  ],
+  "posted_days_ago": 8
+ },
+ {
+  "id": "pm-30",
+  "title": "Senior Product Manager – Pricing & monetisation",
+  "level": "Senior Product Manager",
+  "min_years": 5,
+  "max_years": 8,
+  "company": "Fluxa",
+  "sector": "B2B SaaS",
+  "company_blurb": "Fluxa builds software for businesses in France and across Europe.",
+  "company_size": "scaleup",
+  "company_size_label": "Scale-up (200–1,000)",
+  "company_type": "startup",
+  "city": "Lyon",
+  "location": "Lyon",
+  "work_mode": "On-site",
+  "work_mode_label": "On-site",
+  "salary_min": 75,
+  "salary_max": 100,
+  "pedigree": "preferred",
+  "language": "English only",
+  "requirements": [
+   "5+ years of product management experience",
+   "Experience with B2B discovery and customer interviews",
+   "Strong analytical skills: SQL or comfort with dashboards",
+   "Excellent written communication and stakeholder management",
+   "Grande École / top-tier engineering or business degree preferred",
+   "Fluent English (team language is English); French is a plus"
+  ],
+  "nice_to_have": [
+   "Ability to work with sales and customer success on roadmap",
+   "Technical background (engineering, data science) is a plus"
+  ],
+  "responsibilities": [
+   "Own the roadmap for pricing & monetisation end to end",
+   "Run discovery with users and turn insights into clear specs",
+   "Work daily with engineering, design and data to ship fast",
+   "Define success metrics and report impact to leadership"
+  ],
+  "screening": [
+   "Are you authorised to work in France (or need visa sponsorship)?",
+   "What is your French language level?",
+   "Why are you interested in Fluxa?"
+  ],
+  "posted_days_ago": 15
+ }
+]

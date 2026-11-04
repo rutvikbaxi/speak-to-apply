@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block body %}
+<h1 style="margin-top:0">Applications received</h1>
+<p class="muted">{{ apps|length }} application{{ '' if apps|length==1 else 's' }} across all jobs</p>
+<div class="card" style="padding:0;overflow-x:auto"><table>
+<tr><th>When</th><th>Candidate</th><th>Job</th><th>Source</th><th>Email</th><th>Resume</th></tr>
+{% for a in apps %}<tr><td>{{ a.when }}</td><td><b>{{ a.name }}</b><br><span class="muted">{{ a.email }}</span></td>
+<td>{{ a.job.title }}<br><span class="muted">{{ a.job.company }}</span></td>
+<td>{% if a.source=='speak-to-apply' %}<span class="pill agent">Speak-to-Apply</span>{% else %}<span class="pill manual">Manual</span>{% endif %}</td>
+<td>{% if a.email_status=='sent' %}<span class="pill sent">Sent</span>{% else %}<span class="pill fail">{{ a.email_status }}</span>{% endif %}</td>
+<td>{% if a.resume %}<a href="/recruiter/resume/{{ a.id }}" target="_blank">PDF</a>{% endif %}</td></tr>
+{% else %}<tr><td colspan="6" class="muted">No applications yet.</td></tr>{% endfor %}
+</table></div>
+{% endblock %}

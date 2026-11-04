@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Speak-to-Apply · Metrics</title>
+<link rel="stylesheet" href="/static/app.css"></head><body><div class="wrap">
+<div class="brand"><span class="dot"></span>Speak-to-Apply <span class="muted" style="font-weight:400">· Build-measure-learn metrics</span></div>
+<div class="card"><h2>Funnel (unique sessions)</h2>
+{% set top = funnel['start'] or 1 %}
+{% for s in steps %}<div class="frow"><div class="flabel">{{ s.replace('_',' ') }}</div><div class="fbar"><div style="width:{{ (100*funnel[s]/top)|round }}%"></div></div><div class="fnum">{{ funnel[s] }}</div></div>{% endfor %}
+</div>
+<div class="grid3">
+<div class="card stat"><div class="big">{{ '%.1f'|format(avg_t) }} min</div><div class="muted">avg time, start → resume</div></div>
+<div class="card stat"><div class="big">{{ '%.1f'|format(avg_q) }}</div><div class="muted">avg follow-up questions ({{ no_q }}/{{ n_intake }} needed none)</div></div>
+<div class="card stat"><div class="big">{% for k,v in sources.items() %}{{ k }}: {{ v }}<br>{% else %}–{% endfor %}</div><div class="muted">input sources used</div></div>
+</div></div></body></html>

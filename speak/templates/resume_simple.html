@@ -1,0 +1,25 @@
+<style>
+body{font-family:sans-serif;font-size:9.5pt;color:#1d2230;line-height:1.35}
+h1{font-size:20pt;margin:0}
+h2{font-size:9.5pt;color:#4a3fd0;margin-top:12px;margin-bottom:3px;border-bottom:1px solid #d9dcf5}
+.head{font-size:11pt;color:#4a3fd0;font-weight:bold}
+.contact{color:#555c6e;font-size:8.8pt}
+.rd{color:#555c6e;font-size:8.8pt;text-align:right}
+.rc{color:#384055}
+p{margin:0}
+ul{margin-top:2px;margin-bottom:6px}
+td{padding:0;vertical-align:top}
+</style>
+<h1>{{ p.name or "Your Name" }}</h1>
+{% if p.headline %}<p class="head">{{ p.headline }}</p>{% endif %}
+<p class="contact">{{ [p.location, p.email, p.phone, p.linkedin]|select|join("  ·  ") }}</p>
+{% if p.summary %}<h2>SUMMARY</h2><p>{{ p.summary }}</p>{% endif %}
+{% if p.experience %}<h2>EXPERIENCE</h2>{% for e in p.experience %}
+<table style="width:100%;margin-top:5px"><tr><td><b>{{ e.title }}</b> <span class="rc">· {{ e.company }}{% if e.location %}, {{ e.location }}{% endif %}</span></td>
+<td class="rd" style="width:120px">{{ e.start }}{% if e.end %} – {{ e.end }}{% endif %}</td></tr></table>
+{% if e.bullets %}<ul>{% for b in e.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}{% endfor %}{% endif %}
+{% if p.education %}<h2>EDUCATION</h2>{% for e in p.education %}
+<table style="width:100%;margin-top:3px"><tr><td><b>{{ e.degree }}</b> <span class="rc">· {{ e.school }}</span></td><td class="rd" style="width:120px">{{ e.year }}</td></tr></table>{% endfor %}{% endif %}
+{% if p.skills %}<h2>SKILLS</h2><p>{{ p.skills|join("  ·  ") }}</p>{% endif %}
+{% if p.languages %}<h2>LANGUAGES</h2><p>{{ p.languages|join("  ·  ") }}</p>{% endif %}
+{% if p.achievements %}<h2>ACHIEVEMENTS</h2><ul>{% for a in p.achievements %}<li>{{ a }}</li>{% endfor %}</ul>{% endif %}
